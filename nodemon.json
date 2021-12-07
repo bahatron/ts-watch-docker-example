@@ -1,0 +1,5 @@
+{
+    "watch": ["src"],
+    "ext": "ts",
+    "exec": "echo 'hi there!' && ts-node ./src/index.ts"
+}

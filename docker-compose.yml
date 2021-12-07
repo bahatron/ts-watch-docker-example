@@ -1,0 +1,19 @@
+version: "3.5"
+
+services:
+    with-tsc-watch:
+        image: sample-tsc-watch-app
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: using-tsc-watch
+        command: npm run tsc-watch
+        volumes:
+            - ./src:/app/src
+
+    with-nodemon:
+        image: sample-tsc-watch-app
+        container_name: using-nodemon
+        command: npm run nodemon
+        volumes:
+            - ./src:/app/src
